@@ -1,0 +1,132 @@
+.footer{
+    display: flex;
+    padding: 2% 5%;
+    line-height: 2vw;
+    background-color: rgb(77, 75, 75);
+    color: white;
+    font-size: 13px;
+}
+.footer h3{
+    padding-bottom: 5%;
+    color: rgb(88, 216, 203);
+}
+.footer h3:hover{
+    color:wheat;
+}
+.footer-left{
+    display: flex;
+    width: 40%;
+}
+.footer-right{
+    display: flex;
+    width: 60%;
+}
+.footer-left1{
+    width: 60%;
+}
+.footer-left1 p{
+    padding: 2% 0;
+}
+.footer-left1 i{
+    padding-right: 5%;
+    font-size: 20px;
+}
+.footer-left2{
+    /* width: 40%; */
+    padding-left: 5%;
+
+}
+.footer-left2 li{
+    list-style: none;
+}
+.footer-left2 a:hover{
+    color: rgb(12, 214, 153);
+    font-weight: 700;
+}
+
+.footer-left2 a{
+    text-decoration: none;
+    color: white;
+}
+.footer-right1{
+    width: 40%;
+}
+.footer-right1 input{
+    width: 100%;
+    height: 30px;
+}
+.footer-right1 button{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+   border: white solid 1px;
+   color: white;
+   margin: 0 2%;
+}
+.footer-right1 button:hover{
+    color: rgb(77, 224, 210);
+}
+.input{
+    padding-top: 3%;
+}
+.footer-icon{
+    text-align: center;
+    padding-top: 5%;
+    width: 100%;
+}
+
+.footer-right2{
+    /* width: 60%; */
+    padding-left: 5%;
+}
+.footer-right2 img{
+    width: 280px;
+    height: 170px;
+}
+
+
+@media  (max-width: 999px){
+    .footer{
+        flex-direction: column;
+        line-height: 3vw;
+
+    }
+    .footer-left{
+        width: 100%;
+        /* justify-content: space-between; */
+    }
+    .footer-right{
+        width: 100%;
+        margin-top: 5%;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 600px){
+    .footer{
+        line-height: 5vw;
+    }
+    .footer-left{
+        flex-direction: column;
+    }
+    .footer-right{
+        flex-direction: column;
+    }
+    .footer-left1{
+        width: 100%;
+    }
+    .footer-left2{
+        width: 100%;
+        padding-top: 5%;
+    }
+    .footer-right1{
+        width: 100%;
+        padding-top: 5%;
+    }
+    .footer-right2{
+        width: 100%;
+        padding-top: 5%;
+    }
+
+
+}
