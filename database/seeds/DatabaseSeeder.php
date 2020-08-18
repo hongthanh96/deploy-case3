@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PackdetailSeeder::class);
         $this->call(ServiceSeeder::class);
         $this->call(AlbumSeeder::class);
+        $this->call(AlbumdetailSeeder::class);
     }
 }
