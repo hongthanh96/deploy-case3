@@ -17,7 +17,7 @@ class CreateAlbumdetailsTable extends Migration
         Schema::create('albumdetails', function (Blueprint $table) {
             $table->id('id');
             $table->string('title');
-            $table->string('description');
+            $table->longText('description');
             $table->integer('isHot')->default('0');
             $table->string('image');
             $table->string('filename');
