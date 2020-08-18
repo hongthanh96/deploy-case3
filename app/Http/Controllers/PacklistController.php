@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\PacklistRepository;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class PacklistController extends Controller
 {
     private $packListRepository;
@@ -15,7 +15,12 @@ class PacklistController extends Controller
 
     public function index()
     {
-        return view('admin.packList');
+        if (Auth::user()->isAdmin == 1){
+            return view('admin.packList');
+            }
+            else{
+                return redirect('/home');
+            }
     }
 
     public function getPactlists(){

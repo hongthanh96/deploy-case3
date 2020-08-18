@@ -6,6 +6,7 @@ use App\Http\Requests\AlbumRequest;
 use App\Models\Album;
 use App\Repositories\AlbumReponsitory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AlbumController extends Controller
 {
@@ -16,7 +17,12 @@ class AlbumController extends Controller
     }
     public function index()
     {
-        return view("admin.albums");
+        if (Auth::user()->isAdmin == 1) {
+            return view("admin.albums");
+        }
+        else{
+           return redirect('/home');
+        }
     }
     public function getAlbums()
     {
@@ -28,7 +34,7 @@ class AlbumController extends Controller
     {
         $requests = $request->all();
         $result = $this->albumReponsitory->add($requests);
-        return response()->json($result , 200);
+        return response()->json($result, 200);
     }
 
     public function edit($id)
@@ -41,7 +47,7 @@ class AlbumController extends Controller
     public function update(AlbumRequest $request, $id)
     {
         $requests = $request->all();
-        $album = $this->albumReponsitory->updateAlbum($requests,$id);
+        $album = $this->albumReponsitory->updateAlbum($requests, $id);
         return response()->json($album);
     }
 

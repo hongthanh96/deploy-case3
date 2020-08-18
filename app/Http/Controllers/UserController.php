@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 // use App\Repositories\UserRepository;
 use App\Repositories\UserRepositoryInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -20,7 +21,13 @@ class UserController extends Controller
 
     public function index()
     {
-        return view('admin.customer');
+        if (Auth::user()->isAdmin == 1){
+            return view('admin.customer');
+            }
+            else{
+                return redirect('/home');
+            }
+
     }
 
 

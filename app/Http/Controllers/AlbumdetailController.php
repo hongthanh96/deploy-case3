@@ -7,6 +7,7 @@ use App\Repositories\AlbumDetailReponsitory;
 use Illuminate\Http\Request;
 use App\Models\Album;
 use App\Models\Albumdetail;
+use Illuminate\Support\Facades\Auth;
 class AlbumdetailController extends Controller
 {
     private $albumDetailReponsitory;
@@ -17,8 +18,14 @@ class AlbumdetailController extends Controller
 
     public function index()
     {
-        $albumss = $this->albumDetailReponsitory->allAlbum();
+        if (Auth::user()->isAdmin == 1){
+            $albumss = $this->albumDetailReponsitory->allAlbum();
         return view('admin.albumDetail',compact('albumss'));
+        }
+        else{
+            return redirect('/home');
+         }
+
     }
 
 

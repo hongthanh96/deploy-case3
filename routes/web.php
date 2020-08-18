@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/home', function () {
+    return view('users.home');
+});
+
 Route::group(['prefix' => '/'], function () {
     Route::get('/', 'HomepageController@index')->name('homepage');
     Route::get('/showAlbum/{id}','HomepageController@showAlbum')->name('home.showAlbum');
@@ -23,15 +28,23 @@ Route::group(['prefix' => '/'], function () {
 
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', function () {
-        return view('admin.home');
-    })->name('admin.home');
-    Route::get('/Albums', 'AlbumController@index')->name('album.index');
-    Route::get('/albumDetail', 'AlbumdetailController@index')->name('albumDetail.index');
-    Route::get('/services', 'ServiceController@index')->name('service.index');
-    Route::get('/packList', 'PacklistController@index')->name('packList.index');
-    Route::get('/packDetail', 'PackdetailController@index')->name('packDetail.index');
-    Route::get('/user', 'UserController@index')->name('user.index');
+
+
+        Route::get('/', function () {
+            if(Auth::user()->isAdmin == 1){
+            return view('admin.home'); }
+            else{
+                return redirect('/home');
+            }
+        })->name('admin.home')->middleware('auth');
+
+    Route::get('/Albums', 'AlbumController@index')->name('album.index')->middleware('auth');
+        Route::get('/albumDetail', 'AlbumdetailController@index')->name('albumDetail.index')->middleware('auth');
+        Route::get('/services', 'ServiceController@index')->name('service.index')->middleware('auth');
+        Route::get('/packList', 'PacklistController@index')->name('packList.index')->middleware('auth');
+        Route::get('/packDetail', 'PackdetailController@index')->name('packDetail.index')->middleware('auth');
+        Route::get('/user', 'UserController@index')->name('user.index')->middleware('auth');
+
 });
 
 Route::group(['prefix' => 'services'], function () {

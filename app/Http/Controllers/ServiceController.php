@@ -6,6 +6,7 @@ use App\Http\Requests\ServiceRequest;
 use App\Models\Service;
 use App\Repositories\ServiceReponsitory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ServiceController extends Controller
 {
@@ -18,7 +19,12 @@ class ServiceController extends Controller
     public function index()
     {
         // $services = $this->serviceReponsitory->all();
+        if (Auth::user()->isAdmin == 1){
         return view('admin.services');
+        }
+        else{
+            return redirect('/home');
+        }
     }
 
     public function getApi(){

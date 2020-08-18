@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PackdetailRequest;
 use App\Repositories\PackDetailRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PackdetailController extends Controller
 {
@@ -15,7 +16,13 @@ class PackdetailController extends Controller
     }
     public function index()
     {
-        return view('admin.packDetail');
+        if (Auth::user()->isAdmin == 1){
+            return view('admin.packDetail');
+            }
+            else{
+                return redirect('/home');
+            }
+
     }
 
     public function getPackDetail(){
