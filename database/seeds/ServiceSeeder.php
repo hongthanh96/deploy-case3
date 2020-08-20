@@ -15,16 +15,16 @@ class ServiceSeeder extends Seeder
     {
         DB::table('services')->insert([
             'name' => 'Quay phóng sự cưới',
-            'description' =>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            'description' =>"Một bức ảnh hơn ngàn lời nói - 1 đoạn Video hơn ngàn bức ảnh. Xem những Clip cực đẹp với thiết bị đẳng cấp tại Wedding studio."
         ]);
         DB::table('services')->insert([
             'name' => 'Thuê trang phục cưới',
-            'description' =>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            'description' =>"Với Wedding studio, các bạn có thể lựa chọn cho mình một chiếc áo cưới lộng lẫy, hợp thời trang, quyến rũ nhất trong ngày cưới."
         ]);
 
         DB::table('services')->insert([
             'name' => 'Trang điểm cô dâu',
-            'description' =>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            'description' =>"Chuyên viên Makeup của chúng tôi có trên 5 năm kinh nghiệm, với phong cách trang điểm đẳng cấp, phong cách tự nhiên, sang trọng..."
         ]);
     }
 }

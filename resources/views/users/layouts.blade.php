@@ -161,14 +161,14 @@
       <div class="footer">
         <div class="footer-left">
             <div class="footer-left1">
-                <h3>GIỚI THIỆU</h3>
+                <h4>GIỚI THIỆU</h4>
                 <p>Wedding Studio luôn được khẳng định là một thương hiệu về dịch vụ ảnh cưới và chụp ảnh cưới trọn gói chuyên nghiệp cùng với đội ngũ thợ chụp ảnh và chuyên gia trang điểm và nhân viên trẻ, năng động, sáng tạo, tận tình, chu đáo.</p>
                     <p><i class="fas fa-home"></i>28 Nguyễn Tri Phương,Tp. Huế</p>
                     <p><i class="far fa-envelope"></i>hi@weddingstudio.com</p>
                     <p><i class="fas fa-phone-alt"></i>0702420339</p>
             </div>
             <div class="footer-left2">
-                <h3>LIÊN KẾT</h3>
+                <h4>LIÊN KẾT</h4>
                 <ul>
                     <li><a href="#">Trang chủ</a></li>
                     <li><a href="#">Album</a></li>
@@ -181,7 +181,7 @@
         </div>
         <div class="footer-right">
             <div class="footer-right1">
-                <h3>ĐĂNG KÍ NHẬN TIN</h3>
+                <h4>ĐĂNG KÍ NHẬN TIN</h4>
                 <input type="text" name="" id="" placeholder="Nhập email của bạn">
                 <div class = "input"><i>Hãy nhập email của bạn vào đây để nhận tin</i></div>
                 <div class = "footer-icon">
@@ -193,8 +193,8 @@
                 </div>
             </div>
             <div class="footer-right2">
-                <h3>KẾT NỐI VỚI CHÚNG TÔI</h3>
-                <img src="" alt="">
+                <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                <img src="{{ asset('image/imgFooter.png') }}" alt="">
             </div>
         </div>
     </div>

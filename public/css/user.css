@@ -2,11 +2,11 @@
     display: flex;
     padding: 2% 5%;
     line-height: 2vw;
-    background-color: rgb(77, 75, 75);
+    background-color: rgb(92, 88, 88);
     color: white;
     font-size: 13px;
 }
-.footer h3{
+.footer h4{
     padding-bottom: 5%;
     color: rgb(88, 216, 203);
 }

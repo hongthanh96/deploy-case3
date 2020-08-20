@@ -92,7 +92,7 @@
           <h1 class="text-center">BẢNG GIÁ</h1>
           <p class="text-center">Chúng tôi cung cấp nhiều gói dịch vụ cho quý khách lựa chọn</p>
       </div>
-      <div class="row">
+      <div class="row mb-5">
           @if (isset($packDetails))
               @foreach ($packDetails as $packDetail)
               <div class="col-4 mt-3 d-flex justify-content-center">
